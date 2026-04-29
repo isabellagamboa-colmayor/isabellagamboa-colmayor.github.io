@@ -1,0 +1,231 @@
+/* ================================
+   RESET Y BASE
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef3f9;
+}
+
+/* ================================
+   LAYOUT GENERAL
+================================ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================================
+   HEADER (AZUL OSCURO CENTRADO)
+================================ */
+
+header {
+    background: linear-gradient(90deg, #0b2e59, #0f4c81);
+    color: white;
+    text-align: center;
+    padding: 12px 10px;
+    border-bottom: 3px solid #0a2540;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+#app {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================================
+   MAPA (BIEN CENTRADO)
+================================ */
+
+#map {
+    flex: 1;
+    width: 96%;
+    margin: 10px auto;
+    border-radius: 12px;
+    border: 2px solid #0f4c81;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================================
+   BARRA REDIMENSION
+================================ */
+
+#resizeBar {
+    height: 6px;
+    background: #c5c5c5;
+    cursor: ns-resize;
+}
+
+/* ================================
+   PANEL INFERIOR
+================================ */
+
+#panelInferior {
+    height: 32vh;
+    min-height: 150px;
+    background: #f8fbff;
+    border-top: 2px solid #0f4c81;
+    position: relative;
+}
+
+/* ================================
+   PANEL DE BOTONES
+================================ */
+
+.panel-botones {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.panel-botones-header {
+    background: #0f4c81;
+    color: white;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: move;
+}
+
+.panel-botones-body {
+    padding: 10px;
+}
+
+.panel-botones button {
+    margin-top: 6px;
+    margin-right: 6px;
+    padding: 7px 10px;
+    background: #0f4c81;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.panel-botones button:hover {
+    background: #0b2e59;
+}
+
+.panel-botones select {
+    margin-top: 6px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ================================
+   VENTANAS
+================================ */
+
+.panel-info {
+    position: absolute;
+    top: 10px;
+    left: 320px;
+    width: 340px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+#tablaAtributos {
+    left: 680px;
+}
+
+.panel-header {
+    background: #0f4c81;
+    color: white;
+    padding: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: move;
+}
+
+.panel-body {
+    padding: 8px;
+    height: calc(100% - 36px);
+    overflow: auto;
+}
+
+/* ================================
+   TABLA
+================================ */
+
+#tablaContenido table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+#tablaContenido th,
+#tablaContenido td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#tablaContenido th {
+    background: #0f4c81;
+    color: white;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #0b2e59;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    font-size: 11px;
+}
+
+/* ================================
+   LEAFLET
+================================ */
+
+.leaflet-control-layers {
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
+}
+
+.leaflet-control-scale {
+    background: white;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+}
